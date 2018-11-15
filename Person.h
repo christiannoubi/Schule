@@ -14,10 +14,16 @@ private:
 public:
     Person ( const Adresse &adresse, const string& name, double groesse )
     {
-
+        this->adresse = adresse;
+        this->name = name;
+        this->groesse = groesse;
     }
     Person () {
 
+    }
+    Person (const string& name, double groesse) {
+        this->name = name;
+        this->groesse = groesse;
     }
 
     const Adresse &getAdresse() const {

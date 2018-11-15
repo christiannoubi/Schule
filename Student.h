@@ -25,7 +25,9 @@ public:
         this->studiengang = studiengang;
     }
 
-    Student (const string& name, double groesse, double note, int semester, const string& studiengang) {
+    Student (const string& name, double groesse, double note, int semester, const string& studiengang):
+            Person(name, groesse)
+    {
         this->note = note;
         this->semester = semester;
         this->studiengang = studiengang;
@@ -59,9 +61,9 @@ public:
     }
     string text () {
         stringstream s;
-        s << "Der Student heißt: "<<getName() << ", er hat die groeße: "<<getGroesse() <<
-          ", er studiert "<< this->studiengang <<" an der Technische Hochschule Nuernberg\n,"
-          " seine durschnittliche note ist: "<< this->note << " und ist im "<<this->semester <<" Semester.\n\n"<< endl;
+        s << "Der Student heißt "<<getName() << ", sie hat die groeße "<<getGroesse() <<
+          ", sie studiert "<< this->studiengang <<" an der Technische Hochschule Nuernberg\n,"
+          " seine durschnittliche note ist "<< this->note << " und ist im "<<this->semester <<" Semester.\n\n"<< endl;
         return s.str();
     }
 };

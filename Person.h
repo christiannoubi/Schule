@@ -12,22 +12,23 @@ private:
     double groesse;
 
 public:
-    Person ( const string& name, double groesse ) {
+    Person ( const Adresse &adresse, const string& name, double groesse )
+    {
 
     }
     Person () {
 
     }
 
-   /* const Adresse &getAdresse() const {
+    const Adresse &getAdresse() const {
         return adresse;
     }
 
     void setAdresse(const Adresse &adresse) {
         Person::adresse = adresse;
-    }*/
+    }
 
-    const string &getName() const {
+   string getName() const {
         return name;
     }
 

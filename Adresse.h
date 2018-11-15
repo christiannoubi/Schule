@@ -23,35 +23,35 @@ public:
 
     }
 
-//    const string &get_strasse() const {
-//        return _strasse;
-//    }
-//
-//    void set_strasse(const string &_strasse) {
-//        Adresse::_strasse = _strasse;
-//    }
-//
-//    const string &get_hausnummer() const {
-//        return _hausnummer;
-//    }
-//
-//    void set_hausnummer(const string &_hausnummer) {
-//        Adresse::_hausnummer = _hausnummer;
-//    }
-//
-//    int get_postleitzahl() const {
-//        return _postleitzahl;
-//    }
-//
-//    void set_postleitzahl(int _postleitzahl) {
-//        Adresse::_postleitzahl = _postleitzahl;
-//    }
-//
-//    const string &get_stadt() const {
-//        return _stadt;
-//    }
-//
-//    void set_stadt(const string &_stadt) {
-//        Adresse::_stadt = _stadt;
-//    }
+    const string &get_strasse() const {
+        return _strasse;
+    }
+
+    void set_strasse(const string &_strasse) {
+        Adresse::_strasse = _strasse;
+    }
+
+    const string &get_hausnummer() const {
+        return _hausnummer;
+    }
+
+    void set_hausnummer(const string &_hausnummer) {
+        Adresse::_hausnummer = _hausnummer;
+    }
+
+    int get_postleitzahl() const {
+        return _postleitzahl;
+    }
+
+    void set_postleitzahl(int _postleitzahl) {
+        Adresse::_postleitzahl = _postleitzahl;
+    }
+
+    const string &get_stadt() const {
+        return _stadt;
+    }
+
+    void set_stadt(const string &_stadt) {
+        Adresse::_stadt = _stadt;
+    }
 };

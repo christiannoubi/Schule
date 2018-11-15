@@ -1,6 +1,7 @@
 #pragma once;
 #include <string>
 #include <sstream>
+#include <iostream>
 #include "Person.h"
 using namespace std;
 
@@ -12,7 +13,12 @@ private:
     string faecher;
 
 public:
-    Lehrer (const string& name, double groesse, const string& titel, const string& status, const string& faecher): Person(name, groesse) {
+    Lehrer (const Adresse & adresse, const string& name, double groesse, const string& titel, const string& status, const string& faecher): Person(adresse, name, groesse) {
+        this->titel = titel;
+        this->faecher = faecher;
+        this->status = status;
+    }
+    Lehrer (const string& name, double groesse, const string& titel, const string& status, const string& faecher) {
         this->titel = titel;
         this->faecher = faecher;
         this->status = status;
@@ -43,6 +49,9 @@ public:
     }
     string text () {
         stringstream s;
-        s << this->getName() << this->getGroesse() << this->status << this->faecher << this->titel << endl;
+        s << "Der Professor heißt: "<<getName()<<"Der Professor hat die Groesse: "<< getGroesse() <<
+          " und sein Status ist: "<<this->status << ".\nDer Professor erteilt die Vorlesung: "
+           << this->faecher <<" an der Technische Hoschule Nürnberg, Sein Titel ist: "<< this->titel <<"\n\n"<< endl;
+        return s.str();
     }
 };

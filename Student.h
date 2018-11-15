@@ -1,10 +1,8 @@
 #pragma once;
-
 #include <string>
 #include <sstream>
-#include "Adresse.h"
 #include "Person.h"
-
+#include <iostream>
 using namespace std;
 
 class Student : public Person{
@@ -14,18 +12,24 @@ private:
     int semester;
     string studiengang;
 
+
 public:
     Student () {
 
     }
-    Student (const string& name, double groesse, double note, int semester, const string& studiengang)
- : Person (  name, groesse)
+    Student (const Adresse &adresse, const string& name, double groesse, double note, int semester, const string& studiengang)
+ : Person (  adresse, name, groesse)
     {
         this->note = note;
         this->semester = semester;
         this->studiengang = studiengang;
     }
 
+    Student (const string& name, double groesse, double note, int semester, const string& studiengang) {
+        this->note = note;
+        this->semester = semester;
+        this->studiengang = studiengang;
+    }
     double getNote() const {
         return note;
     }
@@ -55,6 +59,9 @@ public:
     }
     string text () {
         stringstream s;
-        s << this->getName() << this->getGroesse() << this->studiengang << this->note << this->semester << endl;
+        s << "Der Student heißt: "<<getName() << ", er hat die groeße: "<<getGroesse() <<
+          ", er studiert "<< this->studiengang <<" an der Technische Hochschule Nuernberg\n,"
+          " seine durschnittliche note ist: "<< this->note << " und ist im "<<this->semester <<" Semester.\n\n"<< endl;
+        return s.str();
     }
 };
